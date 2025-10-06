@@ -1,0 +1,435 @@
+body {
+    height: 100vh;
+    width: auto;
+    background-color: black;
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+*{
+    transition: all 0.3s ease-in-out;
+}
+
+.nav {
+    height: 150px;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+.theme {
+    height: 50%;
+    width: auto;
+    background-color: lightgrey;
+    align-items: center;
+    display: flex;
+    gap: 15px;
+}
+
+.actd {
+    display: flex;
+    align-items: center;
+    /* vertically centers icon and text */
+    margin-left: 260px;
+    /* space between each info block */
+    height: 100%;
+    width: 25%;
+}
+
+.themeLogo {
+    object-fit: cover;
+    height: 100%;
+    width: 25%;
+    padding: 50px;
+}
+
+.icon {
+    font-size: 50px;
+    padding: 0px 10px;
+    margin-left: 70px;
+}
+
+.icon-row {
+    display: flex;
+    gap: 15px;
+    /* spacing between circles */
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.icon-circle i {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Hover effect */
+.icon-circle:hover {
+    background: #007bff;
+    /* circle turns blue */
+    transform: scale(1.15);
+}
+
+.icon-circle:hover i {
+    color: #fff;
+    /* icon turns white */
+}
+
+.nav-2 {
+    height: 50%;
+    width: auto;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    /* margin-left: 40px; */
+}
+
+.navbar {
+    display: flex;
+    /* make the links horizontal */
+    color: black;
+    justify-content: center;
+}
+
+.navbar a {
+    margin: 0 30px;
+    /* space between links */
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+    /* smooth hover */
+    position: relative;
+}
+
+.navbar a:hover {
+    color: #007bff;
+    /* text color on hover */
+    transform: translateY(-3px);
+    /* slight upward movement */
+}
+
+
+.nav-2>.cert {
+    background-color: #007bff;
+    /* your custom color */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 15px;
+}
+
+.nav-2>.cert:hover {
+    background-color: #0056b3;
+    /* darker shade on hover */
+    transform: translateY(-2px);
+}
+
+.page-1 {
+    height: 74vh;
+    width: 100%;
+    background: url(./newcirv-67-1536x1024.jpg) center;
+    background-size: cover;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* to contain overlay */
+
+    /* Optional: remove padding if not needed */
+    padding: 0;
+}
+
+/* Create a dark overlay over the background */
+.page-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* semi-transparent black */
+    z-index: 0;
+    /* beneath content */
+}
+
+/* Ensure content stays above the overlay */
+.page-1>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Style the h4 to stand out */
+.page-1 h4 {
+    color: rgb(232, 225, 225);
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* helps text pop */
+    margin: 0;
+}
+
+.page-1 h1 {
+    color: rgb(232, 225, 225);
+    font-weight: lighter;
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    /* helps text pop */
+    margin: 0;
+}
+
+/* NEW: Style the inner content wrapper */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.1rem;
+}
+
+.page-2 {
+    width: auto;
+    background-color: lightseagreen;
+}
+
+.row-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+/* Card styles (shared) */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 90%;
+    max-width: 350px;
+    height: 300px;
+    text-align: center;
+}
+
+.icon {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.rating {
+    color: teal;
+    font-weight: bold;
+}
+
+.author {
+    color: gray;
+    font-size: 14px;
+}
+
+.avatar {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.lectures {
+    color: #00b3b3;
+    margin-top: 10px;
+}
+
+.price {
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 6px;
+    margin-top: 15px;
+    color: #009999;
+}
+
+button {
+    background: white;
+    color: #009999;
+    border: 2px solid #009999;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #009999;
+    color: white;
+}
+
+.page-3 {
+    background-color: gray;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.newsLetter {
+    flex: 1 1 300px;
+    background-color: gray;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.news {
+    color: white;
+    font-size: 2rem;
+}
+
+.email-container {
+    flex: 1 1 300px;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+}
+
+input[type="email"] {
+    width: 90%;
+    padding: 10px 40px 10px 10px;
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    background-color: transparent;
+}
+
+input[type="email"]::placeholder {
+    color: white;
+    opacity: 0.9;
+}
+
+.send-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+}
+
+.send-icon:hover {
+    color: #c8f7f0;
+}
+
+/* Optional: mobile-friendly font and spacing adjustments */
+@media (max-width: 768px) {
+    .news {
+        font-size: 1.5rem;
+    }
+
+    .email-container {
+        max-width: 100%;
+    }
+
+    .page-6 {
+        padding: 20px;
+    }
+}
+
+.footer {
+    background-color: black;
+    padding: 60px 40px;
+    color: #6c757d;
+    height: 60vh;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-left {
+    flex: 1 1 300px;
+    margin-bottom: 30px;
+}
+
+.footer-left h3 {
+    color: lightseagreen;
+    font-size: 20px;
+}
+
+.footer-left h2 small {
+    display: block;
+    font-size: 14px;
+    color: #00bfa6;
+    margin-top: 5px;
+}
+
+.footer-left p {
+    margin: 20px 0;
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    color: lightseagreen;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: white;
+}
+
+.accred {
+    background-color: black;
+    width: 63%;
+    height: 80px;
+    font-size: 18px;
+    color: white;
+}
